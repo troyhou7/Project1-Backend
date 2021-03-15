@@ -1,0 +1,14 @@
+dev/houston/daotests/ExpenseDaoTests.java
+ dev.houston.daotests.ExpenseDaoTests
+dev/houston/utiltests/HibernateUtilTest.java
+ dev.houston.utiltests.HibernateUtilTest
+dev/houston/servicetests/MinerServiceTestsMockito.java
+ dev.houston.servicetests.MinerServiceTestsMockito
+dev/houston/servicetests/ExpenseServiceTests.java
+ dev.houston.servicetests.ExpenseServiceTests
+dev/houston/servicetests/GetExpensesByMinerIdTest.java
+ dev.houston.servicetests.GetExpensesByMinerIdTest
+dev/houston/daotests/MinerDaoTests.java
+ dev.houston.daotests.MinerDaoTests
+dev/houston/utiltests/JwtUtilTests.java
+ dev.houston.utiltests.JwtUtilTests

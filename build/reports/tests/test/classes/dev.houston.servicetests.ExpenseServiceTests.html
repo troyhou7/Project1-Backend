@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ExpenseServiceTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ExpenseServiceTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/dev.houston.servicetests.html">dev.houston.servicetests</a> &gt; ExpenseServiceTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.558s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">update_expense()</td>
+<td class="success">0.327s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">write_expense()</td>
+<td class="success">0.231s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>DEBUG [Test worker] (StatisticsInitiator.java:101) - Statistics initialized [enabled=false]
+DEBUG [Test worker] (TransactionImpl.java:53) - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+DEBUG [Test worker] (TransactionImpl.java:81) - begin
+DEBUG [Test worker] (ActionQueue.java:281) - Executing identity-insert immediately
+DEBUG [Test worker] (SqlStatementLogger.java:144) - insert into expense (amount, date_resolved, date_submitted, description, m_id, resolved_reason, status) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into expense (amount, date_resolved, date_submitted, description, m_id, resolved_reason, status) values (?, ?, ?, ?, ?, ?, ?)
+DEBUG [Test worker] (IdentifierGeneratorHelper.java:78) - Natively generated identity: 57
+DEBUG [Test worker] (ResourceRegistryStandardImpl.java:106) - HHH000387: ResultSet's statement was not registered
+DEBUG [Test worker] (TransactionImpl.java:98) - committing
+DEBUG [Test worker] (AbstractFlushingEventListener.java:140) - Processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:193) - Dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:121) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (EntityPrinter.java:110) - Listing entities:
+DEBUG [Test worker] (EntityPrinter.java:117) - dev.houston.entities.Expense{amount=100.0, dateResolved=0, expenseId=57, description=Needed a new pickaxe, minerId=2, dateSubmitted=1615751717, resolvedReason=, status=pending}
+DEBUG [Test worker] (LogicalConnectionManagedImpl.java:172) - Initiating JDBC connection release from afterTransaction
+DEBUG [Test worker] (LogicalConnectionManagedImpl.java:172) - Initiating JDBC connection release from afterTransaction
+DEBUG [Test worker] (SqlStatementLogger.java:144) - select expense0_.expense_id as expense_1_0_0_, expense0_.amount as amount2_0_0_, expense0_.date_resolved as date_res3_0_0_, expense0_.date_submitted as date_sub4_0_0_, expense0_.description as descript5_0_0_, expense0_.m_id as m_id6_0_0_, expense0_.resolved_reason as resolved7_0_0_, expense0_.status as status8_0_0_ from expense expense0_ where expense0_.expense_id=?
+Hibernate: select expense0_.expense_id as expense_1_0_0_, expense0_.amount as amount2_0_0_, expense0_.date_resolved as date_res3_0_0_, expense0_.date_submitted as date_sub4_0_0_, expense0_.description as descript5_0_0_, expense0_.m_id as m_id6_0_0_, expense0_.resolved_reason as resolved7_0_0_, expense0_.status as status8_0_0_ from expense expense0_ where expense0_.expense_id=?
+DEBUG [Test worker] (EntityReferenceInitializerImpl.java:131) - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Expense#57]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `amount` : value = 100.0
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`amount`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `dateResolved` : value = 0
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`dateResolved`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `dateSubmitted` : value = 1615751717
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`dateSubmitted`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `description` : value = Needed a new pickaxe
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`description`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `minerId` : value = 2
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`minerId`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `resolvedReason` : value = 
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`resolvedReason`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `status` : value = pending
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`status`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Expense#57]
+DEBUG [Test worker] (AbstractLoadPlanBasedEntityLoader.java:307) - Done entity load : dev.houston.entities.Expense#57
+DEBUG [Test worker] (LogicalConnectionManagedImpl.java:172) - Initiating JDBC connection release from afterTransaction
+DEBUG [Test worker] (TransactionImpl.java:53) - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+DEBUG [Test worker] (TransactionImpl.java:81) - begin
+DEBUG [Test worker] (TransactionImpl.java:98) - committing
+DEBUG [Test worker] (AbstractFlushingEventListener.java:140) - Processing flush-time cascades
+DEBUG [Test worker] (AbstractFlushingEventListener.java:193) - Dirty checking collections
+DEBUG [Test worker] (AbstractFlushingEventListener.java:114) - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+DEBUG [Test worker] (AbstractFlushingEventListener.java:121) - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG [Test worker] (EntityPrinter.java:110) - Listing entities:
+DEBUG [Test worker] (EntityPrinter.java:117) - dev.houston.entities.Expense{amount=100.0, dateResolved=1615751717, expenseId=57, description=Needed a new pickaxe, minerId=1, dateSubmitted=1615751717, resolvedReason=This checks out, status=approved}
+DEBUG [Test worker] (SqlStatementLogger.java:144) - update expense set amount=?, date_resolved=?, date_submitted=?, description=?, m_id=?, resolved_reason=?, status=? where expense_id=?
+Hibernate: update expense set amount=?, date_resolved=?, date_submitted=?, description=?, m_id=?, resolved_reason=?, status=? where expense_id=?
+DEBUG [Test worker] (LogicalConnectionManagedImpl.java:172) - Initiating JDBC connection release from afterTransaction
+DEBUG [Test worker] (LogicalConnectionManagedImpl.java:172) - Initiating JDBC connection release from afterTransaction
+Expense{expenseId=57, minerId=1, amount=100.0, description='Needed a new pickaxe', status=approved, dateSubmitted=1615751717, dateResolved=1615751717, resolvedReason='This checks out'}
+ INFO [Test worker] (ExpenseServiceTests.java:45) - Expense 57 updated successfully
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.7</a> at Mar 14, 2021, 3:55:21 PM</p>
+</div>
+</div>
+</body>
+</html>

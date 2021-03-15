@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.houston.daotests.MinerDaoTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-03-14T19:55:21" hostname="Troys-MBP" time="0.652">
+  <properties/>
+  <testcase name="get_miner_by_id()" classname="dev.houston.daotests.MinerDaoTests" time="0.168"/>
+  <testcase name="get_all_miners()" classname="dev.houston.daotests.MinerDaoTests" time="0.482"/>
+  <system-out><![CDATA[DEBUG [Test worker] (SqlStatementLogger.java:144) - select miner0_.miner_id as miner_id1_1_0_, miner0_.first_name as first_na2_1_0_, miner0_.foreman as foreman3_1_0_, miner0_.last_name as last_nam4_1_0_, miner0_.pass as pass5_1_0_, miner0_.username as username6_1_0_, expenses1_.expense_id as expense_1_0_1_, expenses1_.expense_id as expense_1_0_2_, expenses1_.amount as amount2_0_2_, expenses1_.date_resolved as date_res3_0_2_, expenses1_.date_submitted as date_sub4_0_2_, expenses1_.description as descript5_0_2_, expenses1_.m_id as m_id6_0_2_, expenses1_.resolved_reason as resolved7_0_2_, expenses1_.status as status8_0_2_ from miner miner0_ left outer join expense expenses1_ on miner0_.miner_id=expenses1_.expense_id where miner0_.miner_id=?
+Hibernate: select miner0_.miner_id as miner_id1_1_0_, miner0_.first_name as first_na2_1_0_, miner0_.foreman as foreman3_1_0_, miner0_.last_name as last_nam4_1_0_, miner0_.pass as pass5_1_0_, miner0_.username as username6_1_0_, expenses1_.expense_id as expense_1_0_1_, expenses1_.expense_id as expense_1_0_2_, expenses1_.amount as amount2_0_2_, expenses1_.date_resolved as date_res3_0_2_, expenses1_.date_submitted as date_sub4_0_2_, expenses1_.description as descript5_0_2_, expenses1_.m_id as m_id6_0_2_, expenses1_.resolved_reason as resolved7_0_2_, expenses1_.status as status8_0_2_ from miner miner0_ left outer join expense expenses1_ on miner0_.miner_id=expenses1_.expense_id where miner0_.miner_id=?
+DEBUG [Test worker] (EntityReferenceInitializerImpl.java:131) - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+DEBUG [Test worker] (CollectionReferenceInitializerImpl.java:93) - Result set contains (possibly empty) collection: [dev.houston.entities.Miner.expenses#1]
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Miner#1]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `expenses` : value = NOT NULL COLLECTION
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`expenses`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `fname` : value = Grimbeard
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`fname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `foreman` : value = true
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`foreman`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `lname` : value = Guzzleflask
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`lname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `pass` : value = minez
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`pass`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `username` : value = gbeard
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`username`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Miner#1]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections were found in result set for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (CollectionLoadContext.java:303) - Collection fully initialized: [dev.houston.entities.Miner.expenses#1]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections initialized for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (AbstractLoadPlanBasedEntityLoader.java:307) - Done entity load : dev.houston.entities.Miner#1
+DEBUG [Test worker] (LogicalConnectionManagedImpl.java:172) - Initiating JDBC connection release from afterTransaction
+ INFO [Test worker] (MinerDaoTests.java:24) - Miner 1 retrieved
+DEBUG [Test worker] (CriteriaQueryImpl.java:303) - Rendered criteria query -> select generatedAlias0 from Miner as generatedAlias0
+DEBUG [Test worker] (QueryTranslatorImpl.java:292) - parse() - HQL: select generatedAlias0 from dev.houston.entities.Miner as generatedAlias0
+DEBUG [Test worker] (ErrorTracker.java:97) - throwQueryException() : no errors
+DEBUG [Test worker] (QueryTranslatorImpl.java:313) - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[IDENT] Node: 'dev'
+       |     |  |  |  \-[IDENT] Node: 'houston'
+       |     |  |  \-[IDENT] Node: 'entities'
+       |     |  \-[IDENT] Node: 'Miner'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+DEBUG [Test worker] (HqlSqlBaseWalker.java:129) - select << begin [level=1, statement=select]
+DEBUG [Test worker] (FromElement.java:153) - FromClause{level=1} : dev.houston.entities.Miner (generatedAlias0) -> miner0_
+DEBUG [Test worker] (FromReferenceNode.java:60) - Resolved : generatedAlias0 -> miner0_.miner_id
+DEBUG [Test worker] (HqlSqlBaseWalker.java:133) - select : finishing up [level=1, statement=select]
+DEBUG [Test worker] (HqlSqlWalker.java:760) - processQuery() :  ( SELECT ( {select clause} miner0_.miner_id ) ( FromClause{level=1} miner miner0_ ) )
+DEBUG [Test worker] (JoinProcessor.java:129) - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Miner): [miner]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(dev.houston.entities.Miner)
+    |  | originalText: generatedAlias0
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+DEBUG [Test worker] (JoinProcessor.java:304) - Using FROM fragment [miner miner0_]
+DEBUG [Test worker] (HqlSqlBaseWalker.java:137) - select >> end [level=1, statement=select]
+DEBUG [Test worker] (QueryTranslatorImpl.java:279) - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (miner)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'miner0_.miner_id as miner_id1_1_' {alias=generatedAlias0, className=dev.houston.entities.Miner, tableAlias=miner0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'miner0_.first_name as first_na2_1_, miner0_.foreman as foreman3_1_, miner0_.last_name as last_nam4_1_, miner0_.pass as pass5_1_, miner0_.username as username6_1_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[miner0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'miner miner0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=miner,tableAlias=miner0_,origin=null,columns={,className=dev.houston.entities.Miner}}
+
+DEBUG [Test worker] (ErrorTracker.java:97) - throwQueryException() : no errors
+DEBUG [Test worker] (QueryTranslatorImpl.java:258) - HQL: select generatedAlias0 from dev.houston.entities.Miner as generatedAlias0
+DEBUG [Test worker] (QueryTranslatorImpl.java:259) - SQL: select miner0_.miner_id as miner_id1_1_, miner0_.first_name as first_na2_1_, miner0_.foreman as foreman3_1_, miner0_.last_name as last_nam4_1_, miner0_.pass as pass5_1_, miner0_.username as username6_1_ from miner miner0_
+DEBUG [Test worker] (ErrorTracker.java:97) - throwQueryException() : no errors
+DEBUG [Test worker] (SqlStatementLogger.java:144) - select miner0_.miner_id as miner_id1_1_, miner0_.first_name as first_na2_1_, miner0_.foreman as foreman3_1_, miner0_.last_name as last_nam4_1_, miner0_.pass as pass5_1_, miner0_.username as username6_1_ from miner miner0_
+Hibernate: select miner0_.miner_id as miner_id1_1_, miner0_.first_name as first_na2_1_, miner0_.foreman as foreman3_1_, miner0_.last_name as last_nam4_1_, miner0_.pass as pass5_1_, miner0_.username as username6_1_ from miner miner0_
+DEBUG [Test worker] (DelegatingBasicLogger.java:384) - Result set row: 0
+DEBUG [Test worker] (Loader.java:1593) - Result row: EntityKey[dev.houston.entities.Miner#1]
+DEBUG [Test worker] (DelegatingBasicLogger.java:384) - Result set row: 1
+DEBUG [Test worker] (Loader.java:1593) - Result row: EntityKey[dev.houston.entities.Miner#2]
+DEBUG [Test worker] (DelegatingBasicLogger.java:384) - Result set row: 2
+DEBUG [Test worker] (Loader.java:1593) - Result row: EntityKey[dev.houston.entities.Miner#3]
+DEBUG [Test worker] (DelegatingBasicLogger.java:384) - Result set row: 3
+DEBUG [Test worker] (Loader.java:1593) - Result row: EntityKey[dev.houston.entities.Miner#4]
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Miner#1]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `expenses` : value = NOT NULL COLLECTION
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`expenses`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `fname` : value = Grimbeard
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`fname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `foreman` : value = true
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`foreman`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `lname` : value = Guzzleflask
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`lname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `pass` : value = minez
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`pass`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `username` : value = gbeard
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`username`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Miner#1]
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Miner#2]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `expenses` : value = NOT NULL COLLECTION
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`expenses`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `fname` : value = Yurdrael
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`fname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `foreman` : value = false
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`foreman`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `lname` : value = Keghart
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`lname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `pass` : value = 12345
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`pass`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `username` : value = kegy
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`username`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Miner#2]
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Miner#3]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `expenses` : value = NOT NULL COLLECTION
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`expenses`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `fname` : value = Gimly
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`fname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `foreman` : value = true
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`foreman`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `lname` : value = Ironhammer
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`lname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `pass` : value = gimly
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`pass`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `username` : value = gimly
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`username`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Miner#3]
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Miner#4]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `expenses` : value = NOT NULL COLLECTION
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`expenses`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `fname` : value = Numdril
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`fname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `foreman` : value = false
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`foreman`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `lname` : value = Thundersword
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`lname`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `pass` : value = pass
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`pass`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `username` : value = user
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`username`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Miner#4]
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:73) - Loading collection: [dev.houston.entities.Miner.expenses#4]
+DEBUG [Test worker] (SqlStatementLogger.java:144) - select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+Hibernate: select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+DEBUG [Test worker] (ResultSetProcessorImpl.java:193) - Preparing collection initializer : [dev.houston.entities.Miner.expenses#4]
+DEBUG [Test worker] (CollectionReferenceInitializerImpl.java:59) - Found row of collection: [dev.houston.entities.Miner.expenses#4]
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Expense#4]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `amount` : value = 22.34
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`amount`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `dateResolved` : value = 1615672506
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`dateResolved`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `dateSubmitted` : value = 1615672108
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`dateSubmitted`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `description` : value = New gloves
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`description`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `minerId` : value = 2
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`minerId`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `resolvedReason` : value = This is a reasonable request
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`resolvedReason`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `status` : value = approved
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`status`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Expense#4]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections were found in result set for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (CollectionLoadContext.java:303) - Collection fully initialized: [dev.houston.entities.Miner.expenses#4]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections initialized for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:105) - Done loading collection
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:73) - Loading collection: [dev.houston.entities.Miner.expenses#3]
+DEBUG [Test worker] (SqlStatementLogger.java:144) - select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+Hibernate: select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+DEBUG [Test worker] (ResultSetProcessorImpl.java:193) - Preparing collection initializer : [dev.houston.entities.Miner.expenses#3]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections were found in result set for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (CollectionLoadContext.java:303) - Collection fully initialized: [dev.houston.entities.Miner.expenses#3]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections initialized for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:105) - Done loading collection
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:73) - Loading collection: [dev.houston.entities.Miner.expenses#2]
+DEBUG [Test worker] (SqlStatementLogger.java:144) - select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+Hibernate: select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+DEBUG [Test worker] (ResultSetProcessorImpl.java:193) - Preparing collection initializer : [dev.houston.entities.Miner.expenses#2]
+DEBUG [Test worker] (CollectionReferenceInitializerImpl.java:59) - Found row of collection: [dev.houston.entities.Miner.expenses#2]
+DEBUG [Test worker] (TwoPhaseLoad.java:198) - Resolving attributes for [dev.houston.entities.Expense#2]
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `amount` : value = 11.29
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`amount`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `dateResolved` : value = 1615673665
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`dateResolved`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `dateSubmitted` : value = 1615672021
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`dateSubmitted`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `description` : value = new minecart
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`description`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `minerId` : value = 2
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`minerId`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `resolvedReason` : value = Not the right amount
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`resolvedReason`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:211) - Processing attribute `status` : value = denied
+DEBUG [Test worker] (TwoPhaseLoad.java:242) - Attribute (`status`)  - enhanced for lazy-loading? - false
+DEBUG [Test worker] (TwoPhaseLoad.java:381) - Done materializing entity [dev.houston.entities.Expense#2]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections were found in result set for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (CollectionLoadContext.java:303) - Collection fully initialized: [dev.houston.entities.Miner.expenses#2]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections initialized for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:105) - Done loading collection
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:73) - Loading collection: [dev.houston.entities.Miner.expenses#1]
+DEBUG [Test worker] (SqlStatementLogger.java:144) - select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+Hibernate: select expenses0_.expense_id as expense_1_0_0_, expenses0_.expense_id as expense_1_0_1_, expenses0_.amount as amount2_0_1_, expenses0_.date_resolved as date_res3_0_1_, expenses0_.date_submitted as date_sub4_0_1_, expenses0_.description as descript5_0_1_, expenses0_.m_id as m_id6_0_1_, expenses0_.resolved_reason as resolved7_0_1_, expenses0_.status as status8_0_1_ from expense expenses0_ where expenses0_.expense_id=?
+DEBUG [Test worker] (ResultSetProcessorImpl.java:193) - Preparing collection initializer : [dev.houston.entities.Miner.expenses#1]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections were found in result set for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (CollectionLoadContext.java:303) - Collection fully initialized: [dev.houston.entities.Miner.expenses#1]
+DEBUG [Test worker] (DelegatingBasicLogger.java:394) - 1 collections initialized for role: dev.houston.entities.Miner.expenses
+DEBUG [Test worker] (AbstractLoadPlanBasedCollectionInitializer.java:105) - Done loading collection
+DEBUG [Test worker] (LogicalConnectionManagedImpl.java:172) - Initiating JDBC connection release from afterTransaction
+ INFO [Test worker] (MinerDaoTests.java:33) - Miners retrieved
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
