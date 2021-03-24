@@ -18,4 +18,5 @@ This is a Java backend for an expense management application. Miners can login a
 To-do list:
 * Foremen can sort the expense tables to easily locate expenses.
 ## Getting Started
-* git clone https://github.com/troyhou7/Project1-Backend.git
+* git clone backend https://github.com/troyhou7/Project1-Backend.git
+* git clone frontend https://github.com/troyhou7/Project1-Frontend.git
